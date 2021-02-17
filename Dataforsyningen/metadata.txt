@@ -1,0 +1,43 @@
+# This file contains metadata for your plugin. Beginning
+# with version 1.8 this is the preferred way to supply information about a
+# plugin. The current method of embedding metadata in __init__.py will
+# be supported until version 2.0
+
+# This file should be included when you package your plugin.
+
+# Mandatory items:
+
+
+[general]
+name=Dataforsyningen
+qgisMinimumVersion=3.00
+qgisMaximumVersion=3.99
+description=Easy access to webservices from Dataforsyningen (The Danish Map Supply) in QGIS Desktop.
+version=0.1
+author=Danish Agency for Data Supply and Efficiency
+email=dataforsyningen@gmail.com
+
+
+# End of mandatory metadata
+
+about=This plugin makes it easy to use webservices from the Danish Map Supply (In Danish 'Dataforsyningen'). When installed, a new menu is added to QGIS. This menu contains webservices (WMS and WFS) categorized by themes. In order to use the plugin, a user at Dataforsyningen and a token is required. Both is free of charge. <a href="https://dataforsyningen.dk/#en">Read more about creating a user and token.</a> Enter your token to Dataforsyningen in QGIS' option-dialog (found in QGIS' setting-menu). It is possible to add your own layers and services to the Dataforsyning-menu. Read more about this <a href="https://dataforsyningen.dk/#en" target="_blank"> option</a> (link opens in your browser). In danish: Dette plugin gør det let at bruge webservices fra Dataforsyningen. Når pluginet er installeret, tilføjes en ny menu, Dataforsyningen, til QGIS. Denne menu indeholder webservices (WMS og WFS) kategoriseret i temaer. For at bruge dette plugin, er det nødvendigt at have en bruger til Dataforsyningen samt et token. Begge dele er gratis. <a href="https://dataforsyningen.dk/#da">Læs mere om oprettelse af Dataforsyningsbruger og token</a>. Indtast dit token til Dataforsyningen i QGIS' indstillingsdialog. Det er desuden muligt at tilføje dine egne lag og services til Dataforsyning-menuen. Læs mere om denne <a href="https://dataforsyningen.dk/#da" target="_blank"> mulighed</a> (linket åbnes i din browser).<p></p>This plugin is developed by <a href="www.dataforsyningen.dk" target="_blank"> Dataforsyningen (Styrelsen for Dataforsyning og Effektivisering)</a> and <a href="septima.dk" targer="_blank">Septima</a>. <p></p>Contact information: dataforsyningen@gmail.com<p></p> <img src="https://sdfe.dk/media/2916873/log_sde_rgb_dk.png" alt="SDFE"> <p></p><img src="http://www.septima.dk/skin1/img/logo_143x39.png" alt="Septima">
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# 2021-02-2021: version 0.1, Dataforsyningen
+
+# Tags are comma separated with spaces allowed
+tags=Dataforsyningen, Agency for Data Supply and Efficiency, Danish Map Supply, Open Data, INSPIRE, Styrelsen for Dataforsyning og Effektivisering, SDFE, Danish, dansk, Danmark, Denmark, WMS, WFS
+
+# TODO: dataforsyning - ret
+homepage=https://github.com/Dataforsyningen/
+tracker=https://github.com/Dataforsyningen/
+repository=https://github.com/Dataforsyningen/
+category=Dataforsyningen
+icon=images/icon.png
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+

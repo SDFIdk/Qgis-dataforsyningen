@@ -1,0 +1,13 @@
+/.project
+*.pyc
+/.pydevproject
+/.settings/
+/Dataforsyningen.zip
+/dataforsyningen.zip
+.vscode/
+.idea/
+about-html/*
+
+
+/Dataforsyningen/i18n
+config_file_url
