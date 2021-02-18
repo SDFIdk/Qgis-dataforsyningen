@@ -1,4 +1,3 @@
-import urllib.request
 import urllib.parse
 import urllib.error
 from qgis.PyQt import QtXml
@@ -52,7 +51,6 @@ class QlrFile(object):
         return result
 
     def get_maplayer_service(self, maplayer_node):
-        service = "other"
         datasource_node = None
         datasource_nodes = maplayer_node.toElement().elementsByTagName("datasource")
         if datasource_nodes.count() == 1:
@@ -64,16 +62,14 @@ class QlrFile(object):
             for part in datasource_parts:
                 if part.startswith("url"):
                     url_part = part
+
             if url_part:
-                if url_part:
-                    # url = url_part.split('=')[1]
-                    url = url_part[5:]
-                    url = urllib.parse.unquote(url)
-                    url_params = dict(
-                        urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)
-                    )
-                    if "servicename" in url_params:
-                        service = url_params["servicename"]
+                url = url_part.split('=')[1]
+                url = urllib.parse.unquote(url)
+                url_params = dict(
+                    urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)
+                )
+                service = url_params.get("servicename","other")
         return service
 
     def get_maplayer_node(self, id):

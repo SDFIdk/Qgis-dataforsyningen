@@ -36,7 +36,6 @@ from qgis.PyQt.QtWidgets import QAction, QMenu, QPushButton
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt import QtXml
 from .mysettings import *
-from .qlr_file import QlrFile
 from .config import Config
 from .layerlocatorfilter import LayerLocatorFilter
 
