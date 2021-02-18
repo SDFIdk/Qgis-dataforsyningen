@@ -7,10 +7,8 @@ import json
 import hashlib
 import glob
 from qgis.gui import QgsMessageBar
-from qgis.core import *
+from qgis.core import QgsMessageLog, QgsNetworkContentFetcher
 from qgis.PyQt.QtCore import (
-    QCoreApplication,
-    QFileInfo,
     QFile,
     QUrl,
     QSettings,
@@ -18,7 +16,6 @@ from qgis.PyQt.QtCore import (
     qVersion,
     QIODevice,
 )
-from qgis.PyQt.QtNetwork import QNetworkAccessManager, QNetworkRequest
 from qgis.PyQt.QtWidgets import QAction, QMenu, QPushButton
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt import QtCore, QtXml
@@ -50,10 +47,10 @@ class DfConfig(QtCore.QObject):
         self.categories = None
 
         # Network
-        self._services_network_manager = QNetworkAccessManager()
-        self._qlr_network_manager = QNetworkAccessManager()
-        self._services_network_manager.finished.connect(self._handle_services_response)
-        self._qlr_network_manager.finished.connect(self._handle_qlr_response)
+        self._services_network_fetcher = QgsNetworkContentFetcher()
+        self._qlr_network_fetcher = QgsNetworkContentFetcher()
+        self._services_network_fetcher.finished.connect(self._handle_services_response)
+        self._qlr_network_fetcher.finished.connect(self._handle_qlr_response)
 
     def begin_load(self):
         self.cached_df_qlr_filename = (
@@ -78,9 +75,11 @@ class DfConfig(QtCore.QObject):
 
     def _request_services(self):
         url_to_get = self.insert_token(DF_SERVICES_URL)
-        self._services_network_manager.get(QNetworkRequest(QUrl(url_to_get)))
+        self._services_network_fetcher.fetchContent(QUrl(url_to_get))
 
-    def _handle_services_response(self, network_reply):
+    def _handle_services_response(self):
+        network_reply = self._services_network_fetcher.reply()
+
         if network_reply.error():
             self.background_category = None
             self.categories = []
@@ -135,9 +134,11 @@ class DfConfig(QtCore.QObject):
 
     def _request_df_qlr_file(self):
         url_to_get = self.settings.value("df_qlr_url")
-        self._qlr_network_manager.get(QNetworkRequest(QUrl(url_to_get)))
-
-    def _handle_qlr_response(self, network_reply):
+        self._qlr_network_fetcher.fetchContent(QUrl(url_to_get))
+        
+    def _handle_qlr_response(self):
+        network_reply = self._qlr_network_fetcher.reply()
+        
         if network_reply.error():
             log_message(
                 "No contact to the configuration at "
