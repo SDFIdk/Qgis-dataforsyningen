@@ -40,12 +40,8 @@ from .qlr_file import QlrFile
 from .config import Config
 from .layerlocatorfilter import LayerLocatorFilter
 
-# TODO: dataforsyning - ret
-#ABOUT_FILE_URL = (
-#    "https://apps2.{}.dk/qgis_knap_config/QGIS3/About/qgis3about.html"
-#)
 ABOUT_FILE_URL = (
-    "https://dataforsyningen.dk/"
+    "https://cdn.dataforsyningen.dk/qgis/Vejledning_Dataforsyningsplugin_til_QGIS.pdf"
 )
 FILE_MAX_AGE = datetime.timedelta(hours=12)
 
