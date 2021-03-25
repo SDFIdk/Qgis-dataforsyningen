@@ -5,8 +5,7 @@ from qgis.PyQt import QtCore
 
 from qgis.utils import active_plugins
 from .qgissettingmanager import *
-# TODO: dataforsyning - ret 
-CONFIG_FILE_URL = ''
+CONFIG_FILE_URL = 'https://cdn.dataforsyningen.dk/qgis/qgis_dataforsynings_plugin_udentoken.qlr'
 class Settings(SettingManager):
     settings_updated = QtCore.pyqtSignal()
 
