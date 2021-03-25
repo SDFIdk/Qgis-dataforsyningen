@@ -27,20 +27,20 @@ about=See english version below.
 
     Har du tilføjet et lag, hvor lagnavnet i lagpanelet vises med grå kursiv skrift, skal du zoome tættere på, førend data vises. Datasæt udstillet som WMS/WMTS er billeder, der allerede har fået en symbolisering. Du kan kun ændre enkelte ting i visualiseringen såsom kontrast, gennemsigtighed mv. Data udstillet som WFS/WCS indeholder hhv. vektorobjekter og georefereret rasterdata, hvor du kan ændre stilarten.
 
-    Det er muligt at tilføje egne lag og webservices til Dataforsyning-menuen. Læs mere om denne mulighed i <a href="https://dataforsyningen.dk/#da" target="_blank">plugin-vejledningen</a> (linket åbnes i din browser).
+    Det er muligt at tilføje egne lag og webservices til Dataforsyning-menuen. Læs mere om denne mulighed i <a href="https://cdn.dataforsyningen.dk/qgis/Vejledning_Dataforsyningsplugin_til_QGIS.pdf" target="_blank">plugin-vejledningen</a> (linket åbnes i din browser).
 
-    Dette plugin kræver, at du har bruger på Dataforsyningen samt et token - begge dele er gratis. <a href="https://dataforsyningen.dk/#da">Læs mere om oprettelse af Dataforsyningsbruger og token</a>. Dit token skal du indtaste i Dataforsyningspanelet i indstillingsdialogen (som du finder under menuen Indstillinger/Settings --> Indstillinger/Options). Læs også <a href="https://dataforsyningen.dk/#da" target="_blank">plugin-vejledningen</a>, hvor der findes mere information om hvordan du kommer igang med at bruge pluginet.
+    Dette plugin kræver, at du har bruger på Dataforsyningen samt et token - begge dele er gratis. <a href="https://dataforsyningen.dk/#da">Læs mere om oprettelse af Dataforsyningsbruger og token</a>. Dit token skal du indtaste i Dataforsyningspanelet i indstillingsdialogen (som du finder under menuen Indstillinger/Settings --> Indstillinger/Options). Læs også <a href="https://cdn.dataforsyningen.dk/qgis/Vejledning_Dataforsyningsplugin_til_QGIS.pdf" target="_blank">plugin-vejledningen</a>, hvor der findes mere information om hvordan du kommer igang med at bruge pluginet.
 
     In English:
     This plugin makes it easy to add data from the Danish Map Supply (In Danish 'Dataforsyningen'). When installed, the plugin appears as a menu. From this 'Dataforsyningen' menu you can add a number of datasets as webservices (WMS, WMTS, WFS, WCS) from the Danish Map Supply. This includes background maps, municipalities, elevation data, place names etc. You can also add the datasets from the search bar (normally found in the lower left part of QGIS).
 
     If a layer is shown with grey italic font, you need to zoom in, to see the data. Data served as WMS/WMTS are served as map images. These data are already symbolized. You can only adjust the brightness, contrast, opacity and blending mode. Data served via WFS/WCS contain vector features and the georeferenced raster data respectively, and can be symbolized.
 
-    It is possible to add your own layers and webservices to the Dataforsyning-menu. Read more about this possibility in the <a href="https://dataforsyningen.dk/#en" target="_blank">plugin-guide</a> (link opens in your browser).
+    It is possible to add your own layers and webservices to the Dataforsyning-menu. Read more about this possibility in the <a href="https://cdn.dataforsyningen.dk/qgis/Vejledning_Dataforsyningsplugin_til_QGIS.pdf" target="_blank">plugin-guide</a> (link opens in your browser).
 
     In order to use the plugin, both an account at Dataforsyningen and a token are required. These are free of charge. Read more about creating a token <a href="https://dataforsyningen.dk/#en">here</a>. You need to enter your token in the panel Dataforsyningen in QGIS' option-dialog (found in the menu 'Settings' --> 'Options').
 
-    For more information on how to use and set-up the plugin, read the <a href="https://dataforsyningen.dk/#en" target="_blank">plugin-guide</a>.
+    For more information on how to use and set-up the plugin, read the <a href="https://cdn.dataforsyningen.dk/qgis/Vejledning_Dataforsyningsplugin_til_QGIS.pdf" target="_blank">plugin-guide</a>.
 
     This plugin is developed by <a href="www.dataforsyningen.dk" target="_blank">Dataforsyningen, Styrelsen for Dataforsyning og Effektivisering</a> and <a href="www.septima.dk" targer="_blank">Septima</a>.
 
@@ -58,9 +58,9 @@ about=See english version below.
 tags=Dataforsyningen, Kortforsyningen, Styrelsen for Dataforsyning og Effektivisering, SDFE, Danish, dansk, Danmark, Denmark, WMS, WFS, WCS, Open Data, INSPIRE,
 
 # TODO: dataforsyning - ret
-homepage=https://github.com/Dataforsyningen/
-tracker=https://github.com/Dataforsyningen/
-repository=https://github.com/Dataforsyningen/
+homepage=https://github.com/Dataforsyningen/Qgis-dataforsyningen
+tracker=https://github.com/Dataforsyningen/Qgis-dataforsyningen/issues
+repository=https://github.com/Dataforsyningen/Qgis-dataforsyningen
 category=Dataforsyningen
 icon=images/icon.png
 # experimental flag
