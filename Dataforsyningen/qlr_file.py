@@ -64,12 +64,14 @@ class QlrFile(object):
                     url_part = part
 
             if url_part:
-                url = url_part.split('=')[1]
+                # url_part is like "url='http://etcetc'"
+                from_ix = url_part.index("=") + 1
+                url = url_part[from_ix:]
                 url = urllib.parse.unquote(url)
                 url_params = dict(
                     urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)
                 )
-                service = url_params.get("servicename","other")
+                service = url_params.get("servicename", "other")
         return service
 
     def get_maplayer_node(self, id):
@@ -91,4 +93,3 @@ class QlrFile(object):
                     return node
             i += 1
         return None
-
