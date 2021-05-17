@@ -14,7 +14,7 @@ qgisMinimumVersion=3.00
 qgisMaximumVersion=3.99
 description=Let adgang til data fra Dataforsyningen (Styrelsen for Dataforsyning og Effektivisering) i QGIS.
     Easy access to webservices from Dataforsyningen (The Danish Map Supply) in QGIS.
-version=0.1
+version=0.2
 author=Danish Agency for Data Supply and Efficiency
 email=dataforsyningen@gmail.com
 
@@ -47,17 +47,16 @@ about=See english version below.
     Contact information: dataforsyningen@gmail.com
 
     <img src="https://sdfe.dk/media/2916873/log_sde_rgb_dk.png" alt="SDFE">
-    <img src="http://www.septima.dk/skin1/img/logo_143x39.png" alt="Septima">
 
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-# 2021-02-2021: version 0.1, Dataforsyningen
+changelog=2021-05-18: version 0.2, Fixed problem with WFS-data
+    2021-02-20: version 0.1, Dataforsyningen
 
 # Tags are comma separated with spaces allowed
 tags=Dataforsyningen, Kortforsyningen, Styrelsen for Dataforsyning og Effektivisering, SDFE, Danish, dansk, Danmark, Denmark, WMS, WFS, WCS, Open Data, INSPIRE,
 
-# TODO: dataforsyning - ret
 homepage=https://github.com/Dataforsyningen/Qgis-dataforsyningen
 tracker=https://github.com/Dataforsyningen/Qgis-dataforsyningen/issues
 repository=https://github.com/Dataforsyningen/Qgis-dataforsyningen
