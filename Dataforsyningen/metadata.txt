@@ -14,7 +14,7 @@ qgisMinimumVersion=3.00
 qgisMaximumVersion=3.99
 description=Let adgang til data fra Dataforsyningen (Styrelsen for Dataforsyning og Effektivisering) i QGIS.
     Easy access to webservices from Dataforsyningen (The Danish Map Supply) in QGIS.
-version=0.2
+version=0.3
 author=Danish Agency for Data Supply and Efficiency
 email=dataforsyningen@gmail.com
 
@@ -22,6 +22,8 @@ email=dataforsyningen@gmail.com
 # End of mandatory metadata
 
 about=See english version below.
+
+    Dette plugin erstatter det tidligere plugin "Kortforsyningen".
 
     Dette plugin gør det let at indlæse en række af Dataforsyningens data i QGIS. Når pluginet er installeret vises menuen Dataforsyningen, hvorfra du kan tilføje en række af Dataforsyningens datasæt (fx baggrundskort, kommunegrænser, højdedata, stednavne, GeoDanmark-data og matrikeldata) udstillet via webservices (WMS, WMTS, WFS og WCS). Du kan også indlæse data via søgefeltet i QGIS (ofte placeret i nederste venstre hjørne af QGIS).
 
@@ -32,6 +34,8 @@ about=See english version below.
     Dette plugin kræver, at du har bruger på Dataforsyningen samt et token - begge dele er gratis. <a href="https://dataforsyningen.dk/#da">Læs mere om oprettelse af Dataforsyningsbruger og token</a>. Dit token skal du indtaste i Dataforsyningspanelet i indstillingsdialogen (som du finder under menuen Indstillinger/Settings --> Indstillinger/Options). Læs også <a href="https://cdn.dataforsyningen.dk/qgis/Vejledning_Dataforsyningsplugin_til_QGIS.pdf" target="_blank">plugin-vejledningen</a>, hvor der findes mere information om hvordan du kommer igang med at bruge pluginet.
 
     In English:
+    This plugin replaces the soon to be deprecated "Kortforsyningen" plugin.
+    
     This plugin makes it easy to add data from the Danish Map Supply (In Danish 'Dataforsyningen'). When installed, the plugin appears as a menu. From this 'Dataforsyningen' menu you can add a number of datasets as webservices (WMS, WMTS, WFS, WCS) from the Danish Map Supply. This includes background maps, municipalities, elevation data, place names etc. You can also add the datasets from the search bar (normally found in the lower left part of QGIS).
 
     If a layer is shown with grey italic font, you need to zoom in, to see the data. Data served as WMS/WMTS are served as map images. These data are already symbolized. You can only adjust the brightness, contrast, opacity and blending mode. Data served via WFS/WCS contain vector features and the georeferenced raster data respectively, and can be symbolized.
@@ -51,7 +55,8 @@ about=See english version below.
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=2021-05-18: version 0.2, Fixed problem with WFS-data
+changelog=2022-01-27: version 0.3, Fixed issue #11 "Crash in qlr_file.py"
+    2021-05-18: version 0.2, Fixed problem with WFS-data
     2021-02-20: version 0.1, Dataforsyningen
 
 # Tags are comma separated with spaces allowed
