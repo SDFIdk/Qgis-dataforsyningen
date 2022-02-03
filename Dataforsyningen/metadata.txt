@@ -46,7 +46,7 @@ about=See english version below.
 
     For more information on how to use and set-up the plugin, read the <a href="https://cdn.dataforsyningen.dk/qgis/Vejledning_Dataforsyningsplugin_til_QGIS.pdf" target="_blank">plugin-guide</a>.
 
-    This plugin is developed by <a href="www.dataforsyningen.dk" target="_blank">Dataforsyningen, Styrelsen for Dataforsyning og Effektivisering</a> and <a href="www.septima.dk" targer="_blank">Septima</a>.
+    This plugin is developed by <a href="https://dataforsyningen.dk/" target="_blank">Dataforsyningen, Styrelsen for Dataforsyning og Effektivisering</a> and <a href="https://septima.dk/" targer="_blank">Septima</a>.
 
     Contact information: dataforsyningen@gmail.com
 
