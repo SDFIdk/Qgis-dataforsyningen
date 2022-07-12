@@ -55,7 +55,7 @@ PY_FILES = \
 	__init__.py
 
 UI_FILES = \
-	settings.ui 
+	settings.ui
 
 EXTRAS = icon.png metadata.txt
 
@@ -83,7 +83,7 @@ default: compile
 compile: $(COMPILED_RESOURCE_FILES)
 
 %_rc.py : %.qrc $(RESOURCES_SRC)
-	pyrcc4 -o $*_rc.py  $<
+	pyrcc5 -o $*_rc.py  $<
 
 %.qm : %.ts
 	$(LRELEASE) $<
