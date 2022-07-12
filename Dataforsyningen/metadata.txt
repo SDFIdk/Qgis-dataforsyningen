@@ -14,7 +14,7 @@ qgisMinimumVersion=3.00
 qgisMaximumVersion=3.99
 description=Let adgang til data fra Dataforsyningen (Styrelsen for Dataforsyning og Effektivisering) i QGIS.
     Easy access to webservices from Dataforsyningen (The Danish Map Supply) in QGIS.
-version=0.3
+version=0.4
 author=Danish Agency for Data Supply and Efficiency
 email=dataforsyningen@gmail.com
 
@@ -35,7 +35,7 @@ about=See english version below.
 
     In English:
     This plugin replaces the soon to be deprecated "Kortforsyningen" plugin.
-    
+
     This plugin makes it easy to add data from the Danish Map Supply (In Danish 'Dataforsyningen'). When installed, the plugin appears as a menu. From this 'Dataforsyningen' menu you can add a number of datasets as webservices (WMS, WMTS, WFS, WCS) from the Danish Map Supply. This includes background maps, municipalities, elevation data, place names etc. You can also add the datasets from the search bar (normally found in the lower left part of QGIS).
 
     If a layer is shown with grey italic font, you need to zoom in, to see the data. Data served as WMS/WMTS are served as map images. These data are already symbolized. You can only adjust the brightness, contrast, opacity and blending mode. Data served via WFS/WCS contain vector features and the georeferenced raster data respectively, and can be symbolized.
