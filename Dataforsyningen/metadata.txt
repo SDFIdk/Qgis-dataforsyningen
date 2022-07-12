@@ -12,10 +12,10 @@
 name=Dataforsyningen
 qgisMinimumVersion=3.00
 qgisMaximumVersion=3.99
-description=Let adgang til data fra Dataforsyningen (Styrelsen for Dataforsyning og Effektivisering) i QGIS.
+description=Let adgang til data fra Dataforsyningen (Styrelsen for Dataforsyning og Infrastruktur) i QGIS.
     Easy access to webservices from Dataforsyningen (The Danish Map Supply) in QGIS.
 version=0.4
-author=Danish Agency for Data Supply and Efficiency
+author=Danish Agency for Data Supply and Infrastructure
 email=dataforsyningen@gmail.com
 
 
@@ -46,21 +46,22 @@ about=See english version below.
 
     For more information on how to use and set-up the plugin, read the <a href="https://cdn.dataforsyningen.dk/qgis/Vejledning_Dataforsyningsplugin_til_QGIS.pdf" target="_blank">plugin-guide</a>.
 
-    This plugin is developed by <a href="https://dataforsyningen.dk/" target="_blank">Dataforsyningen, Styrelsen for Dataforsyning og Effektivisering</a> and <a href="https://septima.dk/" targer="_blank">Septima</a>.
+    This plugin is developed by <a href="https://dataforsyningen.dk/" target="_blank">Dataforsyningen, Styrelsen for Dataforsyning og Infrastruktur</a> and <a href="https://septima.dk/" targer="_blank">Septima</a>.
 
     Contact information: dataforsyningen@gmail.com
 
-    <img src="https://sdfe.dk/media/2916873/log_sde_rgb_dk.png" alt="SDFE">
+    <img src="https://sdfi.dk/Media/637883248655337419/SDFI_DK_RGB.png" alt="SDFI">
 
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=2022-01-27: version 0.3, Fixed issue #11 "Crash in qlr_file.py"
+changelog=2022-07-12: version 0.4, New name
+    2022-01-27: version 0.3, Fixed issue #11 "Crash in qlr_file.py"
     2021-05-18: version 0.2, Fixed problem with WFS-data
     2021-02-20: version 0.1, Dataforsyningen
 
 # Tags are comma separated with spaces allowed
-tags=Dataforsyningen, Kortforsyningen, Styrelsen for Dataforsyning og Effektivisering, SDFE, Danish, dansk, Danmark, Denmark, WMS, WFS, WCS, Open Data, INSPIRE,
+tags=Dataforsyningen, Kortforsyningen, Styrelsen for Dataforsyning og Infrastruktur, SDFI, Danish, dansk, Danmark, Denmark, WMS, WFS, WCS, Open Data, INSPIRE,
 
 homepage=https://github.com/Dataforsyningen/Qgis-dataforsyningen
 tracker=https://github.com/Dataforsyningen/Qgis-dataforsyningen/issues
