@@ -5,7 +5,7 @@ from qgis.PyQt import QtCore
 
 from qgis.utils import active_plugins
 from .qgissettingmanager import *
-CONFIG_FILE_URL = 'https://cdn.dataforsyningen.dk/qgis/qgis_dataforsynings_plugin_udentoken.qlr'
+CONFIG_FILE_URL = 'https://qgisplugin.dataforsyningen.dk/qgis_plugin_dataforsyningen_udentoken.qlr'
 class Settings(SettingManager):
     settings_updated = QtCore.pyqtSignal()
 
@@ -19,10 +19,10 @@ class Settings(SettingManager):
         df_path = path + '/df/'
         if not os.path.exists(df_path):
             os.makedirs(df_path)
-            
+
         self.add_setting(String('cache_path', Scope.Global, df_path))
         self.add_setting(String('df_qlr_url', Scope.Global, CONFIG_FILE_URL))
-        
+
     def is_set(self):
         is_set = False
         if self.value('token'):
@@ -33,9 +33,9 @@ class Settings(SettingManager):
             if kortforsyningen_token:
                 self.set_value('token', kortforsyningen_token)
                 is_set = True
-        
+
         return is_set
-    
+
     def emit_updated(self):
         self.settings_updated.emit()
 
