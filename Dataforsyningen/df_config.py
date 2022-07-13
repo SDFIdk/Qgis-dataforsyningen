@@ -23,7 +23,7 @@ from .qlr_file import QlrFile
 
 FILE_MAX_AGE = datetime.timedelta(hours=12)
 DF_SERVICES_URL = (
-    "https://api.dataforsyningen.dk/service?request=GetServices&token={{df_token}}"
+    "https://api.dataforsyningen.dk/userpermissions/{{df_token}}"
 )
 
 
@@ -90,25 +90,11 @@ class DfConfig(QtCore.QObject):
             )
             return
         response = str(network_reply.readAll(), "utf-8")
-        doc = QtXml.QDomDocument()
-        doc.setContent(response)
-        service_types = doc.documentElement().childNodes()
-        i = 0
+        doc = json.loads(response)
         allowed = {}
         allowed["any_type"] = {"services": []}
-        while i < service_types.count():
-            service_type = service_types.at(i)
-            service_type_name = service_type.nodeName()
-            allowed[service_type_name] = {"services": []}
-            services = service_type.childNodes()
-            j = 0
-            while j < services.count():
-                service = services.at(j)
-                service_name = service.nodeName()
-                allowed[service_type_name]["services"].append(service_name)
-                allowed["any_type"]["services"].append(service_name)
-                j = j + 1
-            i = i + 1
+        for i in doc:
+            allowed["any_type"]["services"].append(i["name"])
         self.allowed_df_services = allowed
         if not allowed["any_type"]["services"]:
             self.df_con_error.emit()
@@ -135,10 +121,10 @@ class DfConfig(QtCore.QObject):
     def _request_df_qlr_file(self):
         url_to_get = self.settings.value("df_qlr_url")
         self._qlr_network_fetcher.fetchContent(QUrl(url_to_get))
-        
+
     def _handle_qlr_response(self):
         network_reply = self._qlr_network_fetcher.reply()
-        
+
         if network_reply.error():
             log_message(
                 "No contact to the configuration at "
