@@ -3,11 +3,11 @@
 /***************************************************************************
  Dataforsyningen
                                  A QGIS plugin
- Easy access to WMS from Dataforsyningen (A service by The Danish geodataservice. Styrelsen for Dataforsyning og Effektivisering)
+ Easy access to WMS from Dataforsyningen (A service by The Danish geodataservice. Styrelsen for Dataforsyning og Infrastruktur)
                               -------------------
         begin                : 2015-05-01
         git sha              : $Format:%H$
-        copyright            : (C) 2015 Agency for Data supply and Efficiency
+        copyright            : (C) 2015 Agency for Data Supply and Infrastructure
         email                : dataforsyningen@gmail.com
  ***************************************************************************/
 
