@@ -22,19 +22,19 @@
 """
 import os.path
 import datetime
-from qgis.gui import QgsMessageBar
+#from qgis.gui import QgsMessageBar
 from qgis.core import *
 from qgis.PyQt.QtCore import (
     QCoreApplication,
     QFileInfo,
-    QUrl,
+    #QUrl,
     QSettings,
     QTranslator,
     qVersion,
 )
 from qgis.PyQt.QtWidgets import QAction, QMenu, QPushButton
 from qgis.PyQt.QtGui import QIcon
-from qgis.PyQt import QtXml
+#from qgis.PyQt import QtXml
 from .mysettings import *
 from .config import Config
 from .layerlocatorfilter import LayerLocatorFilter
