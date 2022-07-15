@@ -22,19 +22,18 @@
 """
 import os.path
 import datetime
-#from qgis.gui import QgsMessageBar
+from PyQt5.QtGui import QDesktopServices
 from qgis.core import *
 from qgis.PyQt.QtCore import (
     QCoreApplication,
     QFileInfo,
-    #QUrl,
+    QUrl,
     QSettings,
     QTranslator,
     qVersion,
 )
 from qgis.PyQt.QtWidgets import QAction, QMenu, QPushButton
 from qgis.PyQt.QtGui import QIcon
-#from qgis.PyQt import QtXml
 from .mysettings import *
 from .config import Config
 from .layerlocatorfilter import LayerLocatorFilter
@@ -225,7 +224,7 @@ class Dataforsyningen(object):
                 lang = "#" + locale[:2]
         except:
             pass
-        self.iface.openURL(ABOUT_FILE_URL + lang, False)
+        QDesktopServices.openUrl(QUrl(ABOUT_FILE_URL))
 
     def unload(self):
         if self.options_factory:
