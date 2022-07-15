@@ -1,6 +1,7 @@
 import urllib.parse
 import urllib.error
 from qgis.PyQt import QtXml
+from qgis.core import QgsMessageLog
 
 
 class QlrFile(object):
@@ -59,20 +60,17 @@ class QlrFile(object):
             datasource = datasource_node.toElement().text()
             url_part = None
             datasource_parts = datasource.split("&") + datasource.split(" ")
-            # datasource_parts.append(datasource.split(' '))
             for part in datasource_parts:
                 if part.startswith("url"):
                     url_part = part
 
+            #QgsMessageLog.logMessage(url_part, "Debug Log")
             if url_part:
-                # url_part is like "url='http://etcetc'"
                 from_ix = url_part.index("=") + 1
-                url = url_part[from_ix:]
-                url = urllib.parse.unquote(url)
-                url_params = dict(
-                    urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)
-                )
-                service = url_params.get("servicename", "other")
+                url_only = url_part[from_ix:]
+                url_path = urllib.parse.urlparse(url_only).path
+                url_path = url_path[1:]
+                service = url_path
         return service
 
     def get_maplayer_node(self, id):
