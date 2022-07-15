@@ -6,19 +6,13 @@ import traceback
 import json
 import hashlib
 import glob
-from qgis.gui import QgsMessageBar
 from qgis.core import QgsMessageLog, QgsNetworkContentFetcher
 from qgis.PyQt.QtCore import (
     QFile,
     QUrl,
-    QSettings,
-    QTranslator,
-    qVersion,
     QIODevice,
 )
-from qgis.PyQt.QtWidgets import QAction, QMenu, QPushButton
-from qgis.PyQt.QtGui import QIcon
-from qgis.PyQt import QtCore, QtXml
+from qgis.PyQt import QtCore
 from .qlr_file import QlrFile
 
 FILE_MAX_AGE = datetime.timedelta(hours=12)
