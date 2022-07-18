@@ -1,6 +1,6 @@
 from builtins import str
 import codecs
-import os.path
+import os
 import datetime
 import traceback
 import json
