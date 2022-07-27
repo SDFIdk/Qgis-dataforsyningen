@@ -39,7 +39,7 @@ from .config import Config
 from .layerlocatorfilter import LayerLocatorFilter
 
 ABOUT_FILE_URL = (
-        "https://qgisplugin.dataforsyningen.dk/qgis_plugin_dataforsyningen_vejledning.pdf"
+        "https://qgisplugin.dataforsyningen.dk/qgis_plugin_dataforsyningen_vejledning.html"
 )
 FILE_MAX_AGE = datetime.timedelta(hours=12)
 
