@@ -5,7 +5,7 @@ from qgis.PyQt import QtCore
 
 from qgis.utils import active_plugins
 from .qgissettingmanager import *
-CONFIG_FILE_URL = 'https://qgisplugin.dataforsyningen.dk/qgis_plugin_dataforsyningen_minimal_udentoken.qlr'
+CONFIG_FILE_URL = 'https://qgisplugin.dataforsyningen.dk/qgis_plugin_dataforsyningen_udentoken.qlr'
 class Settings(SettingManager):
     settings_updated = QtCore.pyqtSignal()
 
