@@ -64,13 +64,17 @@ class QlrFile(object):
                 if part.startswith("url"):
                     url_part = part
 
-            #QgsMessageLog.logMessage(url_part, "Debug Log")
+            # QgsMessageLog.logMessage(url_part, "Debug Log")
             if url_part:
                 from_ix = url_part.index("=") + 1
                 url_only = url_part[from_ix:]
                 url_path = urllib.parse.urlparse(url_only).path
                 url_path = url_path[1:]
-                service = url_path
+                url_split = url_path.split("/")
+                if url_split[0] == "rest" and len(url_split) > 2:
+                    service = url_split[1]
+                else:
+                    service = url_path
         return service
 
     def get_maplayer_node(self, id):
