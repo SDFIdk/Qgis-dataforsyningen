@@ -12,10 +12,10 @@
 name=Dataforsyningen
 qgisMinimumVersion=3.00
 qgisMaximumVersion=3.99
-description=Let adgang til data fra Dataforsyningen (Styrelsen for Dataforsyning og Infrastruktur) i QGIS.
-    Easy access to webservices from Dataforsyningen (The Danish Map Supply) in QGIS.
-version=0.4
-author=Danish Agency for Data Supply and Infrastructure
+description=Let adgang til data fra Dataforsyningen (Klimadatastyrelsen) i QGIS.
+    Easy access to webservices from Dataforsyningen (Agency for Climate Data) in QGIS.
+version=0.5
+author=Danish Agency for Climate Data
 email=dataforsyningen@gmail.com
 
 
@@ -46,22 +46,23 @@ about=See english version below.
 
     For more information on how to use and set-up the plugin, read the <a href="https://qgisplugin.dataforsyningen.dk/qgis_plugin_dataforsyningen_vejledning.html" target="_blank">plugin-guide</a>.
 
-    This plugin is developed by <a href="https://dataforsyningen.dk/" target="_blank">Dataforsyningen, Styrelsen for Dataforsyning og Infrastruktur</a> and <a href="https://septima.dk/" targer="_blank">Septima</a>.
+    This plugin is developed by <a href="https://dataforsyningen.dk/" target="_blank">Dataforsyningen, Klimadatastyrelsen</a> and <a href="https://septima.dk/" targer="_blank">Septima</a>.
 
     Contact information: dataforsyningen@gmail.com
 
-    <img src="https://sdfi.dk/Media/637883248655337419/SDFI_DK_RGB.png" alt="SDFI">
+    <img width="300" src="https://www.klimadatastyrelsen.dk/Media/638615471416374845/logo-ny.svg" alt="">
 
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=2022-07-12: version 0.4, New name
+changelog=2024-10-02: version 0.5, New name, added support for rest services eg. skaermkort_vector_tiles
+    2022-07-12: version 0.4, New name
     2022-01-27: version 0.3, Fixed issue #11 "Crash in qlr_file.py"
     2021-05-18: version 0.2, Fixed problem with WFS-data
     2021-02-20: version 0.1, Dataforsyningen
 
 # Tags are comma separated with spaces allowed
-tags=Dataforsyningen, Kortforsyningen, Styrelsen for Dataforsyning og Infrastruktur, SDFI, Danish, dansk, Danmark, Denmark, WMS, WFS, WCS, Open Data, INSPIRE,
+tags=Dataforsyningen, Kortforsyningen, Klimadatastyrelsen, KDS, Danish, dansk, Danmark, Denmark, WMS, WFS, WCS, Open Data, INSPIRE, Vector Tiles,
 
 homepage=https://github.com/SDFIdk/Qgis-dataforsyningen
 tracker=https://github.com/SDFIdk/Qgis-dataforsyningen/issues
