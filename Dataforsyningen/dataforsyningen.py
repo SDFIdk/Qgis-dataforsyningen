@@ -3,12 +3,12 @@
 /***************************************************************************
  Dataforsyningen
                                  A QGIS plugin
- Easy access to WMS from Dataforsyningen (A service by The Danish geodataservice. Styrelsen for Dataforsyning og Infrastruktur)
+ Easy access to WMS from Dataforsyningen (A service by The Danish geodataservice. Klimadatastyrelsen)
                               -------------------
         begin                : 2015-05-01
         git sha              : $Format:%H$
-        copyright            : (C) 2015 Agency for Data Supply and Infrastructure
-        email                : dataforsyningen@gmail.com
+        copyright            : (C) 2015 Agency for Climate Data
+        email                : support@kds.dk
  ***************************************************************************/
 
 /***************************************************************************
@@ -20,6 +20,7 @@
  *                                                                         *
  ***************************************************************************/
 """
+
 import os.path
 import datetime
 from PyQt5.QtGui import QDesktopServices
@@ -39,7 +40,7 @@ from .config import Config
 from .layerlocatorfilter import LayerLocatorFilter
 
 ABOUT_FILE_URL = (
-        "https://qgisplugin.dataforsyningen.dk/qgis_plugin_dataforsyningen_vejledning.html"
+    "https://qgisplugin.dataforsyningen.dk/qgis_plugin_dataforsyningen_vejledning.html"
 )
 FILE_MAX_AGE = datetime.timedelta(hours=12)
 
@@ -113,7 +114,7 @@ class Dataforsyningen(object):
     def show_messagebar_linked_to_settings(
         self, title, message, level=Qgis.Warning, duration=15
     ):
-        button_text = self.tr(u"Open settings")
+        button_text = self.tr("Open settings")
         widget = self.iface.messageBar().createMessage(title, message)
         button = QPushButton(widget)
         button.setText(button_text)
