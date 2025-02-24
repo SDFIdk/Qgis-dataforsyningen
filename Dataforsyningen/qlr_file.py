@@ -77,19 +77,7 @@ class QlrFile(object):
                 if (
                     url_split[0] == "wms"
                     and len(url_split) >= 2
-                    and url_split[1] == "MatGaeldendeOgForeloebigWMS_DAF"
-                ):
-                    service = url_path
-                elif (
-                    url_split[0] == "wms"
-                    and len(url_split) >= 2
                     and url_split[1] == "natur_friluftskort"
-                ):
-                    service = url_path
-                elif (
-                    url_split[0] == "wfs"
-                    and len(url_split) >= 2
-                    and url_split[1] == "MatGaeldendeOgForeloebigWFS_DAF"
                 ):
                     service = url_path
                 elif (
