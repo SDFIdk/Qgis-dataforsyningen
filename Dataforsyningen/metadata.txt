@@ -55,7 +55,8 @@ about=See english version below.
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=2024-10-02: version 0.6, New email, add support for forvaltning tjenesten 2.0 endpoint move 
+changelog: 2025-02-25: version 0.7, fix for updatede wms endpoints.
+    2025-02-06: version 0.6, New email, add support for forvaltning tjenesten 2.0 endpoint move 
     2024-10-02: version 0.5, New name, added support for rest services eg. skaermkort_vector_tiles
     2022-07-12: version 0.4, New name
     2022-01-27: version 0.3, Fixed issue #11 "Crash in qlr_file.py"
