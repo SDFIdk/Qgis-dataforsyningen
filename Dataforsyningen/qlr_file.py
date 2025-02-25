@@ -71,37 +71,11 @@ class QlrFile(object):
                 url_path = urllib.parse.urlparse(url_only).path
                 url_path = url_path[1:]
                 url_split = url_path.split("/")
-                # if url_split[0] == "rest" and len(url_split) > 2:
-                # These checks is needed for legacy support
-                # Remove when service is updated.
-                if (
-                    url_split[0] == "wms"
-                    and len(url_split) >= 2
-                    and url_split[1] == "MatGaeldendeOgForeloebigWMS_DAF"
-                ):
+               # i.e. base_url/service/
+                if len(url_split) < 2:
                     service = url_path
-                elif (
-                    url_split[0] == "wms"
-                    and len(url_split) >= 2
-                    and url_split[1] == "natur_friluftskort"
-                ):
-                    service = url_path
-                elif (
-                    url_split[0] == "wfs"
-                    and len(url_split) >= 2
-                    and url_split[1] == "MatGaeldendeOgForeloebigWFS_DAF"
-                ):
-                    service = url_path
-                elif (
-                    url_split[0] == "wfs"
-                    and len(url_split) >= 2
-                    and url_split[1] == "natur_friluftskort"
-                ):
-                    service = url_path
-                # services without servicetype in path
-                elif len(url_split) < 2:
-                    service = url_path
-                # standard url split (i.e. rest)
+                # standard url split
+                # i.e. base_url/type/service/
                 else:
                     service = url_split[1]
         return service
