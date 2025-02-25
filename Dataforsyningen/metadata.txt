@@ -14,7 +14,7 @@ qgisMinimumVersion=3.00
 qgisMaximumVersion=3.99
 description=Let adgang til data fra Dataforsyningen (Klimadatastyrelsen) i QGIS.
     Easy access to webservices from Dataforsyningen (Agency for Climate Data) in QGIS.
-version=0.6
+version=0.7
 author=Danish Agency for Climate Data
 email=support@kds.dk
 
